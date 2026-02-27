@@ -302,6 +302,7 @@ input::placeholder,
 textarea::placeholder { color: #b0b0b0; }
 
 .form-group select {
+  white-space: nowrap;
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23c41e3a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -545,13 +546,22 @@ footer {
   .step-h2 { padding: 40px 16px 16px 16px; }
 
   /* --- FORM --- */
+  
   .form-wrapper {
-    max-width: 100%;
-    margin: 16px 4%;
-    padding: 16px;
+  max-width: 100%;
+  margin: 16px 4%;
+  padding: 16px;
   }
 
-  .same-line { flex-direction: column; }
+  .form-wrapper form { gap: 8px; }
+
+  .form-group { gap: 4px; }
+
+  .same-line {
+    flex-direction: row;
+    gap: 10px;
+    
+  }
 
   /* --- IMPORTANCE --- */
   #importanceChart { max-width: 100%; }
