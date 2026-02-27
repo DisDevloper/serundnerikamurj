@@ -17,7 +17,7 @@
             <img src="photos/icon.png" width="60" height="60">
             <h1>Սերունդների կամուրջ</h1>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Меню">
+        <button class="hamburger" id="hamburger" aria-label="menu">
             <span></span><span></span><span></span>
         </button>
         <nav class="nav-links" id="nav-links">
@@ -25,7 +25,7 @@
                 <li><a href="#home">Գլխավոր</a></li>
                 <li><a href="#about">Մեր մասին</a></li>
                 <li><a href="#write-a-letter">Գրել նամակ</a></li>
-                <li><a href="#importance">Ինչու՞ է սա կարևոր</a></li>
+                <li><a href="#importance">Ինչու՞ է կարևոր</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +63,7 @@
             </div> </section>
 
         <section id="write-a-letter" class="write-letter-section">
-            <h2 class="step-h2">Ինչպե՞ս է դա աշխատում</h2>
+            <h2 class="step-h2">Ինչպե՞ս է աշխատում</h2>
             <div class="steps">
                 <div class="step">
                     <img src="photos/pencil.svg" alt="Step 1" class="step-image">
@@ -102,7 +102,7 @@
                             <input class="age-input" type="number" id="age" name="user_age" placeholder="Օրինակ՝ 14. . ." required>
                         </div> <br>
                         <div class="form-group select-group">
-                            <label>Ում է ուղղված նամակը:</label>
+                            <label>Ում է ուղղված:</label>
                             <select name="recipient" required>
                                 <option value="grandpa">Պապիկի</option>
                                 <option value="grandma">Տատիկի</option>
@@ -124,7 +124,7 @@
             <div class="importance-d">
                 <canvas id="importanceChart"></canvas>
                 <p class="diagram-d">
-                    Դիագրամում պատկերված է մարդկանց, կախված տարիքից մենակության տոկոսը։ Ինչպես տեսնում ենք, մարդիկ ծերանալով ավելի հաճախ են իրենց մենակ զգում, հետևաբար նաև կապը այսօրվա սերնդի հետ:<br><br>
+                    Դիագրամում պատկերված է մարդկանց, կախված տարիքից մենակության տոկոսը։ Ինչպես տեսնում ենք, մարդիկ մեծանալով ավելի հաճախ են իրենց մենակ զգում:<br><br>
                     Ժամանակակից սերնդի կենսակերպն ու թվայնացումը ստեղծում են անդունդ, որը մեկուսացնում է տարեցներին։ Մենակությունը տարեցների ամենամեծ մարտահրավերն է այսօր։ Մենք հավատում ենք, որ այսօրվա սերունդը կարող է հաղթահարել այդ մարտահրավերը։ Ժամանակն է կառուցել հասարակություն, որտեղ ոչ ոք լքված չէ։<br><br>
                 </p>
             </div>
@@ -150,7 +150,7 @@
 
             <div class="footer-social">
                 <h4>Կապ</h4>
-                <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5d34333b321d2e35342f3c363c292e24733c30">[email&#160;protected]</a></p>
+                <p>Email: </p>
                 <p>Հասցե: Երևան, Նոր Նորք, Արտեմ Միկոյան 35</p>
             </div>
         </div>
@@ -172,22 +172,4 @@
 </body>
 </html>
 
-<!--
-SQL:
 
- DROP TABLE IF EXISTS letters;
-
-<!--
-SQL:
-
- DROP TABLE IF EXISTS letters;
-
-CREATE TABLE letters (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    sender_name VARCHAR(255),
-    recipient VARCHAR(255),
-    user_age INT,
-    user_message TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-); 
--->
