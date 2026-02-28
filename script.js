@@ -1,8 +1,3 @@
-// const exampleBtn = document.getElementById('exampleBtn');
-// exampleBtn.addEventListener('click', () => {
-    
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('importanceChart').getContext('2d');
     
