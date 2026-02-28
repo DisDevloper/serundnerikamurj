@@ -1,4 +1,4 @@
-/* ===== ПЕРЕМЕННЫЕ ===== */
+/* ===== VARIABLES ===== */
 :root {
   --accent: #c41e3a;
   --text: #636151;
@@ -9,7 +9,7 @@
   --shadow-strong: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* ===== БАЗОВЫЕ ПРАВИЛА ===== */
+/* ===== BASE RULES ===== */
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -420,7 +420,7 @@ footer {
   color: #888;
 }
 
-/* ===== HAMBURGER MENU (только мобиль) ===== */
+\\
 .hamburger {
   display: none;
   flex-direction: column;
@@ -452,7 +452,6 @@ footer {
   .form-wrapper { max-width: 90%; }
 }
 
-/* Мобильный телефон */
 @media (max-width: 700px) {
 
   /* --- HEADER --- */
@@ -475,10 +474,8 @@ footer {
 
   .logo-title img { width: 36px; height: 36px; }
 
-  /* Гамбургер видим на мобиле */
   .hamburger { display: flex; }
 
-  /* Навигация скрыта по умолчанию, открывается по клику */
   .nav-links {
     display: none;
     position: absolute;
@@ -521,14 +518,12 @@ footer {
     object-fit: cover;
   }
 
-  /* --- CARDS: горизонтальный скролл --- */
   .members,
   .steps {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
     padding-bottom: 10px;
-    /* Плавный скролл на iOS */
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     padding-left: 4%;
@@ -576,7 +571,7 @@ footer {
   footer { padding: 30px 4% 16px 4%; }
 }
 
-/* Очень маленькие экраны */
+/* ULTRA SMALL DISPLAYS */
 @media (max-width: 380px) {
   .logo-title h1 { font-size: 12px; max-width: 140px; }
   .intro-image { width: 100px; height: 100px; }
