@@ -1,3 +1,5 @@
+<!--  PHP ԱՄԲՈՂՋ ԿՈԴԸ ՍՏԵՂԾՎԱԾ Է ԼՈԿԱԼ ԲԱԶԱՅԻ ՀԱՄԱՐ, ՊԻՏԱՆԻ ՉԷ -->
+
 <?php
 $host = 'localhost';
 $db   = 'bridge_db';
@@ -37,4 +39,3 @@ try {
     echo json_encode(["status" => "error", "message" => $e->getMessage()]);
 }
 ?>
-
