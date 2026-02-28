@@ -158,13 +158,12 @@
             <p>Պատրաստված է սիրով, ճեմարանականների կողմից</p>
         </div>
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>    <script>
+    <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('open');
         });
-        // Закрывать меню при клике на ссылку
         navLinks.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => navLinks.classList.remove('open'));
         });
