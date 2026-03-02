@@ -11,13 +11,12 @@
     <title>Սերունդների կամուրջ</title>
 </head>
 <body>
-    <section id="home"></section>
     <header>
         <div class="logo-title">
             <img src="photos/icon.png" width="60" height="60">
             <h1>Սերունդների կամուրջ</h1>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="menu">
+        <button class="hamburger" id="hamburger" aria-label="меню">
             <span></span><span></span><span></span>
         </button>
         <nav class="nav-links" id="nav-links">
@@ -30,19 +29,27 @@
         </nav>
     </header>
 
-    <div class="intro-block">
+    <section id="home" class="intro-block">
         <h2>Կիսվեք ջերմությամբ և սիրով`</h2>
         <p class="intro-fir-p">պապիկների և տատիկների հետ</p>
         <hr class="separator">
-        <p class="intro-sec-p">Գրեք նամակ՝ պարգևեք ուրախություն ծերանոցում բնակվող տարեցներին</p>
-        <img src="photos/gfandgm.png" alt="Intro Image" class="intro-image">
-    </div>
+        <p class="intro-sec-p">
+            Գրեք նամակ՝ պարգևեք ուրախություն ծերանոցում բնակվող տարեցներին
+        </p>
+        <img src="photos/gfandgm.png" alt="Պապիկ և տատիկ" class="intro-image">
+    </section>
 
     <main> 
         <section id="about" class="aboutus">
             <div class="about-textcont">
                 <h2>Մեր մասին</h2>
-                <p>Նախագծի հեղինակներն են ճեմարանի 976 խմբի սաներ՝ Մհեր Գաբրիելյանը, Ալեքս Կուբանյանը և Կարեն Ղարիբյանը։ Մեր առաքելությունն է ստեղծել հոգատար և ջերմ հաղորդակցություն ծերանոցում տարեց մարդկանց հետ` նամակագրության միջոցով նվազեցնելով նրանց մենակության զգացումը, բարձրացնելով նրանց հոգեկան բարեկեցությունը, խթանելով սերունդների միջև կապը։</p>
+                <p>
+                    Նախագծի հեղինակներն են ճեմարանի 976 խմբի սաներ՝ Մհեր 
+                    Գաբրիելյանը, Ալեքս Կուբանյանը և Կարեն Ղարիբյանը։ Մեր առաքելությունն է ստեղծել 
+                    հոգատար և ջերմ հաղորդակցություն ծերանոցում տարեց մարդկանց հետ՝ նամակագրության 
+                    միջոցով նվազեցնելով նրանց մենակության զգացումը, բարձրացնելով նրանց հոգեկան 
+                    բարեկեցությունը, խթանելով սերունդների միջև կապը։
+                </p>
             </div>
             <div class="members">
                 <div class="member">
@@ -60,50 +67,45 @@
                     <h3>Կարեն Ղարիբյան</h3>
                     <p>Կապի հաստատում, տպագրություն և նամակների առաքում:</p>   
                 </div>
-            </div> </section>
+            </div>
+        </section>
 
         <section id="write-a-letter" class="write-letter-section">
             <h2 class="step-h2">Ինչպե՞ս է աշխատում</h2>
             <div class="steps">
                 <div class="step">
-                    <img src="photos/pencil.svg" alt="Step 1" class="step-image">
+                    <img src="photos/pencil.svg" alt="Քայլ 1" class="step-image">
                     <p class="step-p">1. Դուք գրում եք նամակ</p>
                 </div>
                 <div class="step">
-                    <img src="photos/mail.svg" alt="Step 2" class="step-image">
+                    <img src="photos/mail.svg" alt="Քայլ 2" class="step-image">
                     <p class="step-p">2. Ուղարկում եք այն մեզ</p>
                 </div>
                 <div class="step">
-                    <img src="photos/heart.svg" alt="Step 3" class="step-image">
+                    <img src="photos/heart.svg" alt="Քայլ 3" class="step-image">
                     <p class="step-p">3. Մենք փոխանցում ենք այն ծերանոց</p>
                 </div>
             </div>
 
-            <!-- <div class="example-letter">
-                <button class="example-btn" id="exampleBtn"><b>Նամակի օրինակ</b></button>
-            </div>
-            
-            <div class="example-letter-window form-wrapper" id="example-window">
-                
-            </div> -->
-
             <div class="form-wrapper">
-                <form action="/send_letter" method="POST" class="paper-form" id="contactForm">
+                <form action="/send_letter" method="POST" id="contactForm">
                     <h2>Գրեք ձեր նամակը ներքևում</h2>
                     
                     <div class="form-group">
                         <label for="name">Ձեր անուն ազգանունը:</label>
-                        <input class="name-input" type="text" id="name" name="user_name" placeholder="Օրինակ՝ Արամ Արամյան..." required>
+                        <input class="name-input" type="text" id="name" name="user_name" 
+                            placeholder="Օրինակ՝ Արամ Արամյան..." required>
                     </div>
 
                     <div class="same-line">
-                        <div class="form-group" style="margin-bottom:0;">
+                        <div class="form-group">
                             <label for="age">Ձեր տարիքը:</label>
-                            <input class="age-input" type="number" id="age" name="user_age" placeholder="Օրինակ՝ 14. . ." required>
-                        </div> <br>
+                            <input class="age-input" type="number" id="age" name="user_age" 
+                                min="1" max="120" placeholder="Օրինակ՝ 14..." required>
+                        </div>
                         <div class="form-group select-group">
-                            <label>Ում է ուղղված:</label>
-                            <select name="recipient" required>
+                            <label for="recipient">Ում է ուղղված:</label>
+                            <select id="recipient" name="recipient" required>
                                 <option value="grandpa">Պապիկի</option>
                                 <option value="grandma">Տատիկի</option>
                             </select>
@@ -112,24 +114,32 @@
                     
                     <div class="form-group">
                         <label for="message">Ձեր նամակը:</label>
-                        <textarea id="message" name="user_message" rows="8" placeholder="Գրեք այն ամենը, ինչ կցանկանայիք փոխանցել..." required></textarea>
+                        <textarea id="message" name="user_message" rows="8" 
+                            placeholder="Գրեք այն ամենը, ինչ կցանկանայիք փոխանցել..." 
+                            required></textarea>
                     </div>
 
                     <button type="submit" class="send-btn" id="submit">Ուղարկել նամակը</button>
                 </form>
             </div>
         </section>
+
         <section id="importance" class="importance-section">
             <h2>Ինչու՞ է դա կարևոր</h2>
             <div class="importance-d">
                 <canvas id="importanceChart"></canvas>
                 <p class="diagram-d">
-                    Դիագրամում պատկերված է մարդկանց, կախված տարիքից մենակության տոկոսը։ Ինչպես տեսնում ենք, մարդիկ մեծանալով ավելի հաճախ են իրենց մենակ զգում:<br><br>
-                    Ժամանակակից սերնդի կենսակերպն ու թվայնացումը ստեղծում են անդունդ, որը մեկուսացնում է տարեցներին։ Մենակությունը տարեցների ամենամեծ մարտահրավերն է այսօր։ Մենք հավատում ենք, որ այսօրվա սերունդը կարող է հաղթահարել այդ մարտահրավերը։ Ժամանակն է կառուցել հասարակություն, որտեղ ոչ ոք լքված չէ։<br><br>
+                    Դիագրամում պատկերված է մարդկանց, կախված տարիքից մենակության տոկոսը։ Ինչպես տեսնում ենք,
+                    մարդիկ մեծանալով ավելի հաճախ են իրենց մենակ զգում:<br><br>
+                    Ժամանակակից սերնդի կենսակերպն ու թվայնացումը ստեղծում են անդունդ, 
+                    որը մեկուսացնում է տարեցներին։ Մենակությունը տարեցների ամենամեծ 
+                    մարտահրավերն է այսօր։ Մենք հավատում ենք, որ այսօրվա սերունդը կարող է հաղթահարել 
+                    այդ մարտահրավերը։ Ժամանակն է կառուցել հասարակություն, որտեղ ոչ ոք լքված չէ։<br><br>
                 </p>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-info">
@@ -144,7 +154,7 @@
                     <li><a href="#home">Գլխավոր</a></li>
                     <li><a href="#about">Մեր մասին</a></li>
                     <li><a href="#write-a-letter">Գրել նամակ</a></li>
-                    <li><a href="#importance">Նախագծի կարևորություն</a></li>
+                    <li><a href="#importance">Ինչու՞ է կարևոր</a></li>
                 </ul>
             </div>
 
@@ -159,17 +169,19 @@
             <p>Պատրաստված է սիրով, ճեմարանականների կողմից</p>
         </div>
     </footer>
+
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('open');
+            hamburger.classList.toggle('open');
         });
         navLinks.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => navLinks.classList.remove('open'));
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
         });
     </script>
 </body>
 </html>
-
-
