@@ -384,8 +384,8 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 50px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-nav h4,
@@ -440,8 +440,17 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* ===== MEDIA QUERIES ===== */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
+/* ===== MEDIA QUERIES ===== */
 /* Планшет */
 @media (max-width: 900px) {
   .logo-title h1 { font-size: 18px; }
@@ -554,7 +563,6 @@ footer {
   .same-line {
     flex-direction: row;
     gap: 10px;
-    
   }
 
   /* --- IMPORTANCE --- */
@@ -579,3 +587,22 @@ footer {
   .intro-image { width: 100px; height: 100px; }
   .member, .step { width: 180px; min-width: 180px; padding: 16px; }
 }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#home,
+.aboutus,
+.steps .step,
+.form-wrapper,
+.importance-section {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+.aboutus { animation-delay: 0.2s; }
+.steps .step { animation-delay: 0.4s; }
+.form-wrapper { animation-delay: 0.6s; }
+.importance-section { animation-delay: 0.8s; }
