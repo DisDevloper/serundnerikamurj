@@ -377,7 +377,7 @@ footer {
   background-color: #f5f5dc;
   padding: 40px 8% 20px 8%;
   color: #4A4540;
-  border-top: 1px solid #e0d7cc;
+  border-top: 50px solid #e0d7cc;
 }
 
 .footer-container {
@@ -416,7 +416,7 @@ footer {
   text-align: center;
   border-top: 1px solid #e0d7cc;
   padding-top: 20px;
-  font-size: 14px;
+  font-size: 16px;
   color: #888;
 }
 
