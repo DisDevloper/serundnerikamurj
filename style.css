@@ -391,7 +391,7 @@ footer {
 .footer-nav h4,
 .footer-social h4,
 .footer-info h4 {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: 18px;
   color: var(--accent);
 }
