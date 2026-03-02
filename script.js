@@ -40,44 +40,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData.entries());
 
     if (data.user_name.trim().split(/\s+/).length !== 2) {
         alert('Խնդրում ենք մուտքագրել անուն և ազգանուն:');
+        event.preventDefault();
         return;
     }
-    if(data.user_age < 0 || data.age > 120) {
+    if (data.user_age < 0 || data.user_age > 120) {
         alert('Խնդրում ենք մուտքագրել ձեր իրական տարիքը:');
+        event.preventDefault();
         return;
     }
-    if (data.user_message.trim().split(/\s+/).length <= 30) {
+    if (data.user_message.trim().split(/\s+/).length < 30) {
         alert('Խնդրում ենք մուտքագրել առնվազն 30 բառից բաղկացած հաղորդագրություն:');
+        event.preventDefault();
         return;
     }
-    fetch('server.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data) 
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.status === 'success') {
-            alert('Շնորհակալություն: Ձեր նամակն ուղարկված է:');
-            contactForm.reset();
-        } else {
-            alert('Սխալ: ' + result.message);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Կապի սխալ: Ստուգեք MAMP-ը:');
-    });
 });
