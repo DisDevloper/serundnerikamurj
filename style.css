@@ -571,6 +571,9 @@ footer {
   footer { padding: 30px 4% 16px 4%; }
 }
 
+.footer-info .footer-nav .footer-social {
+  padding-bottom: 10px !important;
+}
 /* ULTRA SMALL DISPLAYS */
 @media (max-width: 380px) {
   .logo-title h1 { font-size: 12px; max-width: 140px; }
